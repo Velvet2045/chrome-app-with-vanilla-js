@@ -1,4 +1,5 @@
-@import "reset.css";
+@import "css/reset.css";
+@import "css/variables.css";
 
 .hidden {
   display: none;
@@ -14,9 +15,10 @@
 }
 
 body {
+  margin: 0;
   position: relative;
-  width: var(--image-width);
-  height: var(--image-height);
+  width: 100%;
+  height: 100%;
   animation: hideSplachScreen 1s ease-in-out forwards;
 }
 

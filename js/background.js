@@ -15,7 +15,7 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
 const IMAGE_WIDTH = window.screen.availWidth;
-const IMADGE_HEIGHT = window.screen.availHeight - 105;
+const IMADGE_HEIGHT = window.screen.availHeight - 107;
 
 bgImage.setEle;
 bgImage.src = `img/${chosenImage}`;
