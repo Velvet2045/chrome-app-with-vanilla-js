@@ -1,0 +1,135 @@
+@import "reset.css";
+
+.hidden {
+  display: none;
+}
+
+@keyframes hideSplachScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  position: relative;
+  width: var(--image-width);
+  height: var(--image-height);
+  animation: hideSplachScreen 1s ease-in-out forwards;
+}
+
+.display-image-brightness {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.display-header,
+.display-main,
+.display-footer {
+  position: absolute;
+  color: white;
+}
+
+.display-header {
+  top: 10px;
+  right: 20px;
+}
+
+.display-main {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-footer {
+  font-family: "Times New Roman", Times, serif;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#clock {
+  font-size: 140px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#greeting {
+  margin-bottom: 30px;
+}
+
+#todo-form input,
+#todo-list {
+  font-size: 18px;
+  width: 240px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#todo-form input {
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  color: white;
+  margin-bottom: 60px;
+}
+
+#todo-form input::placeholder {
+  color: white;
+}
+
+/* 스크롤바 너비 설정*/
+#todo-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* 스크롤바 막대 설정*/
+#todo-list::-webkit-scrollbar-thumb {
+  /* 스크롤바 막대 높이 설정 */
+  height: 5px;
+  background-color: rgba(255, 255, 255, 1);
+
+  /* 스크롤바 둥글게 설정 */
+  border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+#todo-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#todo-list {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+#todo-list button {
+  background-color: transparent;
+  border: transparent;
+}
+
+#todo-list button,
+#todo-list span {
+  margin-bottom: 10px;
+}
+
+.display-footer span:first-child {
+  margin-bottom: 10px;
+}
